@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-List</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <header>
+        <div id="headline-overview" class="headline-main">
+            <p>TODO-Liste Impressum</p>
+        </div>
+    </header>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                    <div class="text">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:350px;">Impressum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Dieses Impressum gilt für das Programmierpraktikum Soziale Netzwerke.
+
+                                        </td>
+                                    </tr>
+
+                                   
+
+                                    <tr>
+                                        <td>
+                                            <b>Verantwortlich für diese Abgabe sind: </b>
+                                            <p>Jan-Hendrick Fabricius 
+                                            <br>Mrtknr. 354636
+                                            <br>Studiengang: Informatik</p>
+                                            
+                                            <p>Jonas Spilles
+                                            <br>Mrtknr. 355578
+                                            <br>Studiengang: Wirtschaftsinformatik</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                           
+                                        </td>
+                                    </tr>
+
+                                    
+                                </tbody>
+                            </table>
+                            <button id="home" class="btn btn-primary"> 
+                               Zurück
+                            </button>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+     var create = document.getElementById("home");
+	create.onclick = function() {goHome();} 
+    
+    function goHome() {
+		window.location.href = "index.html"; 
+	}</script>
+</html>
