@@ -7,7 +7,9 @@ window.onload = function(){
     
     var edit = document.getElementById("edit_btn");
 	edit.onclick = function() {goto_edit();} 
-    
+
+	var edit = document.getElementById("delete_btn");
+	edit.onclick = function() {delete_todo();} 
     
     function goto_impressum(){
         window.location.href = "impressum.html"; 
@@ -18,6 +20,10 @@ window.onload = function(){
     
     function goto_edit() {
 		window.location.href = "edit_todo.html"; 
+	}
+
+	function delete_todo(){
+		confirm("Möchtest du das ToDo wirklich löschen?");
 	}
   
 }
