@@ -13,22 +13,35 @@
 }
 
 /* delete and edit button */
-.todo-btn{
+.todo-edit-btn{
 	width:35px;
 	height:35px;
 	padding: 7px 12px;
 	margin: 2px;
+	background-color: rgb(0,139,6);
 }
 
-#todo_deadline, #todo_progress {
+.todo-delete-btn{
+	width:35px;
+	height:35px;
+	padding: 7px 12px;
+	margin: 2px;
+	background-color:rgb(201,15,3);
+}
+
+.progress_bar_style{
+	margin-top: 10px;
+}
+
+#todo_text, #todo_deadline, #todo_progress {
 	margin-top: 12px;
 }
 
 #todo_save {
-	margin-top: 12px;
-	height: 49px;
+	margin: 7px;
 }
 
 #create_new_btn {
 	margin: 7px;
+
 }
