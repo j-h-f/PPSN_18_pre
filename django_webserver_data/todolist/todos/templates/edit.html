@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TODO-List</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+	<header>
+		<div id="headline-create" class="headline-main">
+			<p>ToDo Bearbeiten</p>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2 main_table">
+				<div class="text"></div>
+					<form action="/todo/edit/{{todo.id}}/" method="post">
+						{% csrf_token %}
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th style="width:500px">ToDo-Text</th>
+										<th>Deadline</th>
+										<th style="width:50px">Fortschritt</th>
+									</tr>
+								</thead>
+								<form>
+									<tbody>
+										<tr>
+											<td>
+												<div class="form-group">
+													<input class="form-control" rows="2" name="todo_edit_text" id="todo_edit_text" type="text" value="{{todo.text}}"></input>
+												</div>
+											</td>
+											<td>
+												<div class="form-group">
+													<input class="form-control" rows="1" name="todo_edit_deadline" id="todo_edit_deadline" type="date" value="{{todo.deadline.date.isoformat}}"></input>
+												</div>
+											</td>
+											<td>
+												<div class="form-group">
+													<input class="form-control" rows="1" name="todo_edit_progress" id="todo_edit_progress" type="number" min="0" max="100" value="{{todo.process}}"></input>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</form>
+							</table>
+							<a href="/todo" id="home" class="btn btn-primary"> Zurück </a>
+							<input class="btn btn-primary" type="submit" id="todo_save" value="Speichern"></input>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="script_new.js"></script>
+
+</html>
